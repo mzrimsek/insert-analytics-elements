@@ -11,7 +11,7 @@ describe('Async Google Analytics', () => {
     describe('insertAnalyticsElements', () => {
         it('Inserts two child elements into the head', () => {
             const document = new JSDOM(``).window.document;
-            insertAnalyticsElements('XXXX', document);
+            insertAnalyticsElements('XXXXX', document);
             expect(document.head.childNodes.length).to.equal(2);
         });
 
@@ -48,7 +48,7 @@ describe('Async Google Analytics', () => {
                     expect(lastChild.nodeName).to.equal('SCRIPT');
                 });
 
-                it('Has matching src attribute', () => {
+                it('Has the correct src attribute', () => {
                     const document = new JSDOM(``).window.document;
 
                     insertAnalyticsElements('XXXXX', document);
@@ -58,7 +58,7 @@ describe('Async Google Analytics', () => {
                     expect(lastChild.src).to.equal(scriptTag.src);
                 });
 
-                it('Has matching async attribute', () => {
+                it('Has the correct async attribute', () => {
                     const document = new JSDOM(``).window.document;
 
                     insertAnalyticsElements('XXXXX', document);

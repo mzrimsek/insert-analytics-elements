@@ -12,7 +12,10 @@
     "build:after": "npm run copypackage && npm run copyreadme",
     "build": "npm run build:before && tsc && npm run build:after",
     "dist": "npm run build && cd dist && npm publish",
-    "test": "node_modules/.bin/mocha -r ./node_modules/ts-node/register 'test/**/test.ts' --reporter nyan"
+    "test": "node_modules/.bin/mocha -r ./node_modules/ts-node/register 'test/**/test.ts' --reporter nyan",
+    "preversion": "npm test",
+    "version": "npm run build && git add -A dist",
+    "postversion": "git push && git push --tags"
   },
   "keywords": [
     "analytics"
