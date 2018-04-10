@@ -1,5 +1,7 @@
 # insert-analytics-elements
 
+[![Build Status](https://travis-ci.org/mzrimsek/insert-analytics-elements.svg?branch=master)](https://travis-ci.org/mzrimsek/insert-analytics-elements)
+
 A small utility library to programmatically insert analytics elements into the DOM.
 
 ## Installation
