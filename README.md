@@ -27,7 +27,7 @@ const googleAnalytics = require('insert-analytics-elements/googleAnalytics');
 googleAnalytics.insertAnalyticsElements('UA-XXXXX-X')
 
 // TypeScript
-import insertAnalyticsElements from 'insert-analytics-tags/googleAnalytics';
+import insertAnalyticsElements from 'insert-analytics-elements/googleAnalytics';
 insertAnalyticsElements('UA-XXXXX-X');
 ```
 
