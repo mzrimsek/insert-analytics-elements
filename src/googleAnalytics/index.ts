@@ -1,8 +1,8 @@
 export const insertAnalyticsElements = (googleAnalyticsId: string, doc: Document = document) => {
-    doc.head.insertBefore(_getGoogleAnalyticsScriptTag(googleAnalyticsId, doc), doc.head.firstChild);
+    doc.head.insertBefore(_getGoogleAnalyticsScriptElement(googleAnalyticsId, doc), doc.head.firstChild);
 };
 
-export const _getGoogleAnalyticsScriptTag = (googleAnalyticsId: string, doc: Document = document): HTMLScriptElement => {
+export const _getGoogleAnalyticsScriptElement = (googleAnalyticsId: string, doc: Document = document): HTMLScriptElement => {
     const script = doc.createElement('script');
     script.innerHTML = `
     (function(i, s, o, g, r, a, m) {

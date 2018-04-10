@@ -13,9 +13,12 @@ yarn add insert-analytics-elements
 
 ## Included Providers
 
-* [Google Analytics](#Google-Analytics)
-* [Google Analytics with async](#Google-Analytics-with-async)
-* [Google Tag Manager](#Google-Tag-Manager)
+* [Google Analytics](#google-analytics)
+    * [Documentation](https://developers.google.com/analytics/devguides/collection/analyticsjs/)
+* [Google Analytics with async](#google-analytics-with-async)
+    * [Documentation](https://developers.google.com/analytics/devguides/collection/analyticsjs/)
+* [Google Tag Manager](#google-tag-manager)
+    * [Documentation](https://developers.google.com/tag-manager/quickstart)
 
 ## Usage
 
@@ -27,11 +30,11 @@ const googleAnalytics = require('insert-analytics-elements/googleAnalytics');
 googleAnalytics.insertAnalyticsElements('UA-XXXXX-X')
 
 // TypeScript
-import insertAnalyticsElements from 'insert-analytics-elements/googleAnalytics';
+import { insertAnalyticsElements } from 'insert-analytics-elements/googleAnalytics';
 insertAnalyticsElements('UA-XXXXX-X');
 ```
 
-### Google Analytics with async
+### Google Analytics with Async
 
 ```javascript
 // JavaScript
@@ -39,7 +42,7 @@ const googleAnalyticsAsync = require('insert-analytics-elements/googleAnalytics/
 googleAnalyticsAsync.insertAnalyticsElements('UA-XXXXX-X')
 
 // TypeScript
-import insertAnalyticsElements from 'insert-analytics-elements/googleAnalytics/async';
+import { insertAnalyticsElements } from 'insert-analytics-elements/googleAnalytics/async';
 insertAnalyticsElements('UA-XXXXX-X');
 ```
 
@@ -51,6 +54,6 @@ const googleTagManager = require('insert-analytics-elements/googleTagManager');
 googleTagManager.insertAnalyticsElements('GTM-XXXX')
 
 // TypeScript
-import insertAnalyticsElements from 'insert-analytics-elements/googleTagManager';
+import { insertAnalyticsElements } from 'insert-analytics-elements/googleTagManager';
 insertAnalyticsElements('GTM-XXXX');
 ```

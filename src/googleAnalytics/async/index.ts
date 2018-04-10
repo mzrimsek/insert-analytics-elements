@@ -1,9 +1,9 @@
 export const insertAnalyticsElements = (googleAnalyticsId: string, doc: Document = document) => {
-    doc.head.insertBefore(_getAsyncGoogleAnalyticsScriptTag(doc), doc.head.firstChild);
-    doc.head.insertBefore(_getAsyncGoogleAnalyticsConfigScriptTag(googleAnalyticsId, doc), doc.head.firstChild);
+    doc.head.insertBefore(_getAsyncGoogleAnalyticsScriptElement(doc), doc.head.firstChild);
+    doc.head.insertBefore(_getAsyncGoogleAnalyticsConfigScriptElement(googleAnalyticsId, doc), doc.head.firstChild);
 };
 
-export const _getAsyncGoogleAnalyticsConfigScriptTag = (googleAnalyticsId: string, doc: Document = document): HTMLScriptElement => {
+export const _getAsyncGoogleAnalyticsConfigScriptElement = (googleAnalyticsId: string, doc: Document = document): HTMLScriptElement => {
     const configScript = doc.createElement('script');
     configScript.innerHTML = `
     window.ga = window.ga || function() {
@@ -15,7 +15,7 @@ export const _getAsyncGoogleAnalyticsConfigScriptTag = (googleAnalyticsId: strin
     return configScript;
 };
 
-export const _getAsyncGoogleAnalyticsScriptTag = (doc: Document = document): HTMLScriptElement => {
+export const _getAsyncGoogleAnalyticsScriptElement = (doc: Document = document): HTMLScriptElement => {
     const script = doc.createElement('script');
     script.async = true;
     script.src = 'https://www.google-analytics.com/analytics.js';
