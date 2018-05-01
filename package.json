@@ -1,6 +1,6 @@
 {
   "name": "insert-analytics-elements",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Easily insert analytics elements into the DOM",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
