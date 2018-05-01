@@ -15,7 +15,8 @@
     "test": "./node_modules/.bin/mocha -r ./node_modules/ts-node/register 'test/**/test.ts' --reporter spec",
     "preversion": "npm test",
     "version": "npm run build && git add -A dist",
-    "postversion": "git push && git push --tags"
+    "postversion": "git push && git push --tags",
+    "prepublish": "cd dist"
   },
   "keywords": [
     "analytics"
